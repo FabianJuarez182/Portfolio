@@ -1,0 +1,119 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: #000000;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+}
+
+.navbarContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding: 25px 50px;
+}
+
+.navbarLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  border-left: 1px solid #CBAC60;
+  text-align: center;
+}
+
+.navbarList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  justify-content: auto;
+}
+
+.navbarList li {
+  margin-left: 20px;
+}
+
+.navbarItem {
+  flex: 1;
+  border-left: 1px solid #CBAC60;
+  text-align: center;
+}
+
+.navbarItem:first-child {
+  border-left: none;
+}
+
+.navbarButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Poppins';
+  font-size: 1em;
+  color: #FFFFFF;
+  outline: none;
+}
+
+.navbarButton::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #CBAC60;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbarButton:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.navToggleIcon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #CBAC60;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header.open .navToggleIcon:before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.header.open .navToggleIcon:after {
+  transform: translateY(0) rotate(-45deg);
+}
+.nav{
+  padding-top: 90px;
+}

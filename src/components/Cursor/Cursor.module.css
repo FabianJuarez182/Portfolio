@@ -1,4 +1,3 @@
-
   .cursor-dot,
   .cursor-dot-outline {
     pointer-events: none;
@@ -10,15 +9,19 @@
     opacity: 1;
     transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   }
-  
+
   .cursor-dot {
+    position: fixed;
+    z-index: 10000;
     width: 8px;
     height: 8px;
     background-color: #f3f2f9;
     animation: .4s linear;
   }
-  
+
   .cursor-dot-outline {
+    position: fixed;
+    z-index: 9999;
     width: 40px;
     height: 40px;
     background-color: rgba(0, 0, 0, 0);
@@ -26,11 +29,4 @@
     border-width: 1px;
     border-color: #f3f2f9;
     mix-blend-mode: difference;
-  }
-  
-  .links-container {
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
   }

@@ -1,10 +1,59 @@
 .container {
-    margin: 150px 20px;
-    height: 200px;
-    padding: 50px;
-    margin-bottom: 200px;
+    margin: 100px 20px;
     display: flex;
     justify-content: center;
     background-color: #333333;
     border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #333333;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.texts{
+    width: 90%;
+    padding-right: 50px;
+}
+
+.subtitle{
+    margin-left: 3%;
+    display: flex;
+    height: 100px;
+    transition-property: transform;
+    transition-duration: 350ms;
+    transition-timing-function: ease;
+}
+
+.subtitle:is(:hover, :focus) {
+    transform: translateY(-8px);
+    color: #8E958F;
+}
+
+.aboutme{
+    font-family: 'Source Code Pro';
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+.description{
+    margin-left: 10px;
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link{
+    color: #8E958F;
+}
+
+.pic{
+    margin: 80px;
+    height: 300px;
 }

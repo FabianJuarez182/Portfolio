@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styles from "./Cursor.module.css";
 
 const Cursor = () => {
-  const delay = 18;
+  const delay = 5;
 
   const dot = useRef(null);
   const dotOutline = useRef(null);

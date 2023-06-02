@@ -35,7 +35,7 @@ function Intro() {
       <div className={styles.content}>
         <img className={styles.atom} alt="atom" src="./intro.png" />
         <div className={styles.title}>
-          {["<","m", "y", ".", "p", "o", "r", "t", "f", "o", "l", "i", "o", " ", "/",">"].map(
+          {["<", "p", "o", "r", "t", "f", "o", "l", "i", "o", ".", " b", "y", ".", "F", "A", "B", "I", "A", "N", ".", "J", "U", "A", "R", "E", "Z" ,"/",">"].map(
             (letter, index) => (
               <div
                 key={index}

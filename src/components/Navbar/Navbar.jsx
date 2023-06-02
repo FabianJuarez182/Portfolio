@@ -1,13 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef} from 'react';
 import styles from "./Navbar.module.css";
 import About from '/src/components/About/About.jsx';
 import Intro from '/src/components/Introduction/Introduction.jsx'
+import Experience from '/src/components/Experience/Experience.jsx'
+import Projects from '/src/components/Projects/Projects.jsx';
 import logo from './logo.png';
 
 function Navbar() {
   const refAbout = useRef(null);
   const refProjects = useRef(null);
   const refExperience = useRef(null);
+  const refIntro = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -17,7 +20,7 @@ function Navbar() {
     <div>
       <header className={`${styles.header}`}>
         <div className={styles.logoContainer}>
-          <img src={logo} alt="Logo" className={styles.logo} />
+          <img src={logo} alt="Logo" className={styles.logo} onClick={() => scrollToSection(refIntro)} />
         </div>
         <div className={styles.navbarContainer}>
           <nav className={styles.navbar}>
@@ -41,9 +44,17 @@ function Navbar() {
           </nav>
         </div>
       </header>
-      <Intro />
+      <div className={`${styles.nav} ${styles.navMargin}`} ref={refIntro}>
+        <Intro />
+      </div>
       <div className={`${styles.nav} ${styles.navMargin}`} ref={refAbout}>
         <About />
+      </div>
+      <div className={`${styles.nav} ${styles.navMargin}`} ref={refExperience}>
+        <Experience />
+      </div>
+      <div className={`${styles.nav} ${styles.navMargin}`} ref={refProjects}>
+        <Projects />
       </div>
     </div>
   );

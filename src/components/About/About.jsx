@@ -12,10 +12,10 @@ function About(){
                 </div>
 
                 <p className={styles.description}>
-                Hello everybody. I'm Fabian Juarez, a third year computer science student.
+                Hello everybody. I&apos;m Fabian Juarez, a third year computer science student.
                 </p>
                 <p className={styles.description}>
-                    I'm mainly interested in backend development and cybersecurity.
+                    I&apos;m mainly interested in backend development and cybersecurity.
                 </p>
                 <p className={styles.description}>
                     My biggest hobbies are soccer and ping pong.

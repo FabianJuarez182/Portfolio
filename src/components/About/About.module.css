@@ -8,6 +8,7 @@
 
 .texts{
     width: 90%;
+    padding-right: 50px;
 }
 
 .subtitle{
@@ -38,6 +39,8 @@
 .description{
     margin-left: 10px;
     font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-end;
 }
 
 .link{
@@ -45,6 +48,6 @@
 }
 
 .pic{
-    margin: 20px;
-    height: 200px;
+    margin: 80px;
+    height: 300px;
 }

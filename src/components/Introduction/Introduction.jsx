@@ -32,21 +32,22 @@ function Intro() {
 
   return (
     <div className={styles.intro}>
-      <img className={styles.atom} alt="atom" src="./intro.png" />
-
-      <div className={styles.title}>
-        {["<","m", "y", ".", "p", "o", "r", "t", "f", "o", "l", "i", "o", " ", "/",">"].map(
-          (letter, index) => (
-            <div
-              key={index}
-              className={styles.letter}
-              onMouseEnter={handleHover}
-              onMouseLeave={handleLeave}
-            >
-              {letter}
-            </div>
-          )
-        )}
+      <div className={styles.content}>
+        <img className={styles.atom} alt="atom" src="./intro.png" />
+        <div className={styles.title}>
+          {["<","m", "y", ".", "p", "o", "r", "t", "f", "o", "l", "i", "o", " ", "/",">"].map(
+            (letter, index) => (
+              <div
+                key={index}
+                className={styles.letter}
+                onMouseEnter={handleHover}
+                onMouseLeave={handleLeave}
+              >
+                {letter}
+              </div>
+            )
+          )}
+        </div>
       </div>
     </div>
   );

@@ -4,6 +4,7 @@ import About from '/src/components/About/About.jsx';
 import Intro from '/src/components/Introduction/Introduction.jsx'
 import Experience from '/src/components/Experience/Experience.jsx'
 import Projects from '/src/components/Projects/Projects.jsx';
+import Information from '/src/components/Information/Information.jsx';
 import logo from './logo.png';
 
 function Navbar() {
@@ -11,6 +12,7 @@ function Navbar() {
   const refProjects = useRef(null);
   const refExperience = useRef(null);
   const refIntro = useRef(null);
+  const refInformation = useRef(null);
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
@@ -40,6 +42,11 @@ function Navbar() {
                   Projects
                 </button>
               </li>
+              <li>
+                <button className={`${styles.navbarButton} ${styles.navbarItem} ${styles.navbarLink}`} onClick={() => scrollToSection(refInformation)}>
+                  Contact
+                </button>
+              </li>
             </ul>
           </nav>
         </div>
@@ -55,6 +62,9 @@ function Navbar() {
       </div>
       <div className={`${styles.nav} ${styles.navMargin}`} ref={refProjects}>
         <Projects />
+      </div>
+      <div className={`${styles.nav} ${styles.navMargin}`} ref={refInformation}>
+        <Information />
       </div>
     </div>
   );

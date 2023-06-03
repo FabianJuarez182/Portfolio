@@ -20,11 +20,6 @@
     transition-timing-function: ease;
 }
 
-.subtitle:is(:hover, :focus) {
-    transform: translateY(-8px);
-    color: #8E958F;
-}
-
 .ball{
     width: auto;
     height: auto;

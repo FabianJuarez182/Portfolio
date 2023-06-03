@@ -13,30 +13,31 @@
     display: flex;
     justify-content: center;
     background-color: #333333;
-    border-radius: 10px;
+
     align-items: center;
+    border-bottom: 1px solid #CBAC60;
 }
 
 .texts{
-    width: 90%;
+    width: 430px;
     padding-right: 50px;
+    padding-left: 50px;
 }
 
 .subtitle{
     margin-left: 3%;
     display: flex;
     height: 100px;
-    transition-property: transform;
-    transition-duration: 350ms;
-    transition-timing-function: ease;
+    cursor: pointer;
+    justify-content: center;
 }
 
-.subtitle:is(:hover, :focus) {
-    transform: translateY(-8px);
-    color: #8E958F;
+.title{
+    text-decoration: none;
+    color: #FFFFFFDE;
 }
 
-.aboutme{
+.project{
     font-family: 'Source Code Pro';
     text-transform: uppercase;
     padding: 15px;
@@ -46,14 +47,36 @@
     margin-left: 10px;
     font-family: 'Poppins';
     display: flex;
-    justify-content: flex-end;
+}
+
+.used{
+    font-family: 'Poppins';
+    display: flex;
+    justify-content: flex-start;
 }
 
 .link{
-    color: #8E958F;
+    margin-left: 5px;
+    color: #CBAC60;
+}
+
+.link:hover{
+    filter:opacity(.5);
+    color:#D0ADF0;
 }
 
 .pic{
     margin: 80px;
-    height: 300px;
+    height: 200px;
+}
+
+.technologies{
+    margin: 2px;
+    height: 40px;
+    margin-left: 20px;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
 }

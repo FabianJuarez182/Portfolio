@@ -1,14 +1,14 @@
-import React from 'react';
-import Cursor from './components/Cursor/Cursor.jsx';
-import Navbar  from './components/Navbar/Navbar.jsx';
+import React from 'react'
+import Cursor from './components/Cursor/Cursor'
+import Navbar from './components/Navbar/Navbar'
 
-const App = () => {
+function App() {
   return (
     <div className="container">
       <Cursor />
       <Navbar />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App

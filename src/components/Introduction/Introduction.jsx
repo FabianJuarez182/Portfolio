@@ -1,58 +1,85 @@
-import React, { useState, useEffect } from "react";
-import styles from "./Introduction.module.css";
+/* eslint-disable react/no-array-index-key */
+import React, { useState, useEffect } from 'react'
+import styles from './Introduction.module.css'
 
 function Intro() {
-  const [waveActive, setWaveActive] = useState(false);
+  const [waveActive, setWaveActive] = useState(false)
 
   useEffect(() => {
-    let timer;
+    let timer
     if (waveActive) {
-      const letters = document.querySelectorAll(`.${styles.letter}`);
+      const letters = document.querySelectorAll(`.${styles.letter}`)
       letters.forEach((letter, index) => {
         timer = setTimeout(() => {
-          letter.classList.add(styles.animate);
-        }, index * 100);
-      });
+          letter.classList.add(styles.animate)
+        }, index * 100)
+      })
     } else {
-      const letters = document.querySelectorAll(`.${styles.letter}`);
+      const letters = document.querySelectorAll(`.${styles.letter}`)
       letters.forEach((letter) => {
-        letter.classList.remove(styles.animate);
-      });
+        letter.classList.remove(styles.animate)
+      })
     }
-    return () => clearTimeout(timer);
-  }, [waveActive]);
+    return () => clearTimeout(timer)
+  }, [waveActive])
 
   const handleHover = () => {
-    setWaveActive(true);
-  };
+    setWaveActive(true)
+  }
 
   const handleLeave = () => {
-    setWaveActive(false);
-  };
+    setWaveActive(false)
+  }
 
   return (
     <div className={styles.intro}>
       <div className={styles.content}>
         <img className={styles.atom} alt="atom" src="./intro.png" />
         <div className={styles.title}>
-          {["<", "p", "o", "r", "t", "f", "o", "l", "i", "o", ".", " b", "y", ".", "F", "A", "B", "I", "A", "N", ".", "J", "U", "A", "R", "E", "Z" ,"/",">"].map(
-            (letter, index) => (
-              <div
-                key={index}
-                className={styles.letter}
-                onMouseEnter={handleHover}
-                onMouseLeave={handleLeave}
-              >
-                {letter}
-              </div>
-            )
-          )}
+          {[
+            '<',
+            'p',
+            'o',
+            'r',
+            't',
+            'f',
+            'o',
+            'l',
+            'i',
+            'o',
+            '.',
+            ' b',
+            'y',
+            '.',
+            'F',
+            'A',
+            'B',
+            'I',
+            'A',
+            'N',
+            '.',
+            'J',
+            'U',
+            'A',
+            'R',
+            'E',
+            'Z',
+            '/',
+            '>',
+          ].map((letter, index) => (
+            <div
+              key={index}
+              className={styles.letter}
+              onMouseEnter={handleHover}
+              onMouseLeave={handleLeave}
+            >
+              {letter}
+            </div>
+          ))}
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Intro;
-
-
+export default Intro

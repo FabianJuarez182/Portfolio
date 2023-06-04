@@ -1,6 +1,5 @@
 .intro {
     margin: 25px;
-    margin-bottom: 100px;
     padding: 50px;
     display: flex;
     justify-content: center;
@@ -19,12 +18,11 @@
 .Mega{
     font-family: "Roboto Slab", sans-serif;
     font-weight: 800;
-    margin-bottom: 4rem;
     font-size: 45px;
 }
+
 .container {
     margin: 100px 20px;
-    padding: 50px;
     display: flex;
     justify-content: center;
     background-color: #333333;
